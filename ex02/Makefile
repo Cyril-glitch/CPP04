@@ -1,4 +1,4 @@
-NAME = bin/fire
+NAME = bin/abstract
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -31,10 +31,10 @@ $(OBJ_DIR)/%.o : %.cpp
 .PHONY: all clean fclean re
 
 it :	all
-	./bin/fire
+	./bin/abstract
 
 val:	all
-	valgrind --leak-check=full --show-leak-kinds=all ./bin/fire
+	valgrind --leak-check=full --show-leak-kinds=all ./bin/abstract
 
 clean :
 	rm -rf $(OBJ_DIR)
