@@ -6,7 +6,7 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 08:58:07 by cyril             #+#    #+#             */
-/*   Updated: 2026/09/15 11:12:46 by cyril            ###   ########.fr       */
+/*   Updated: 2026/09/16 09:18:03 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,32 @@
 
 int main()
 {
-    const Animal *meta = new Animal();
-    const Animal *dog = new Dog();
-    const Animal *cat = new Cat();
+    {
+        const Animal *meta = new Animal();
+        const Animal *j = new Dog();
+        const Animal *i = new Cat();
 
-    const WrongAnimal *wrongCat = new WrongCat();
-    std::cout << dog->getType() << " " << std::endl;
-    std::cout << cat->getType() << " " << std::endl;
-    meta->makeSound();
-    cat->makeSound();
-    dog->makeSound();
-    wrongCat->makeSound();
+        std::cout << j->getType() << " " << std::endl;
+        std::cout << i->getType() << " " << std::endl;
+        meta->makeSound();
+        i->makeSound();
+        j->makeSound();
 
-    delete meta;
-    delete cat;
-    delete dog;
-    delete wrongCat;
+        delete meta;
+        delete i;
+        delete j;
+    }
+    std::cout << std::endl;
+    {
+        const WrongAnimal *meta = new WrongAnimal();
+        const WrongAnimal *i = new WrongCat();
+
+        std::cout << i->getType() << " " << std::endl;
+        meta->makeSound();
+        i->makeSound();
+
+        delete meta;
+        delete i;
+    }
     return 0;
 }

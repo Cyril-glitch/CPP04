@@ -6,7 +6,7 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 11:40:28 by cyril             #+#    #+#             */
-/*   Updated: 2026/09/15 11:56:14 by cyril            ###   ########.fr       */
+/*   Updated: 2026/09/16 08:46:25 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Brain
 
         Brain &operator=(Brain const &rhs);
 
-        std::string const & getIdea(size_t index) const ;
+        std::string getIdea(size_t index) const ;
         void setIdea(size_t index, std::string const & idea);
 
     

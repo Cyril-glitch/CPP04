@@ -6,13 +6,13 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 10:04:26 by cyril             #+#    #+#             */
-/*   Updated: 2026/09/15 10:57:14 by cyril            ###   ########.fr       */
+/*   Updated: 2026/09/16 08:28:55 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
 	type = "Dog";
 	std::cout << PURPLE <<"Dog default constructor called" << RESET << std::endl;

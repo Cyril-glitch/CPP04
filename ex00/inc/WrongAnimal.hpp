@@ -6,7 +6,7 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 09:56:39 by cyril             #+#    #+#             */
-/*   Updated: 2026/09/15 11:03:52 by cyril            ###   ########.fr       */
+/*   Updated: 2026/09/16 09:38:22 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongAnimal
     public :
         WrongAnimal(void);
         WrongAnimal(WrongAnimal const & src);
-        virtual ~WrongAnimal(void);
+        ~WrongAnimal(void);
 
         WrongAnimal & operator=(WrongAnimal const & rhs);
         void   makeSound() const;

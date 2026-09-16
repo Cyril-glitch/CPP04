@@ -6,7 +6,7 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 09:10:49 by cyril             #+#    #+#             */
-/*   Updated: 2026/09/15 10:36:28 by cyril            ###   ########.fr       */
+/*   Updated: 2026/09/16 11:42:25 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ Animal::Animal() : type("Animal")
 
 Animal::Animal(Animal const & rhs) : type(rhs.type)
 {
-	std::cout  << MINT << type << " Copy constructor called." << RESET << std::endl; 
+	std::cout  << PURPLE << type << " Copy constructor called." << RESET << std::endl; 
 }
 
 Animal & Animal::operator=(Animal const & src)
 {
-    type = src.type;
+	if (this != &src)
+    	type = src.type;
     return *this;
 }
 

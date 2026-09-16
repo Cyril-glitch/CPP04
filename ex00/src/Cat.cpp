@@ -6,13 +6,13 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 09:25:21 by cyril             #+#    #+#             */
-/*   Updated: 2026/09/15 10:51:55 by cyril            ###   ########.fr       */
+/*   Updated: 2026/09/16 08:28:55 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Cat.hpp"
 
-Cat::Cat()
+Cat::Cat() : Animal()
 {
 	type = "Cat";
 	std::cout << PURPLE <<"Cat default constructor called" << RESET << std::endl;

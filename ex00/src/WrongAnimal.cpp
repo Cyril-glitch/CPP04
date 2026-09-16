@@ -33,6 +33,11 @@ void WrongAnimal::makeSound() const
 	std::cout << "\"Wrong Animal sound\"" << std::endl;
 }
 
+std::string WrongAnimal::getType() const
+{
+    return type;
+}
+
 WrongAnimal::~WrongAnimal()
 {
 	std::cout << PURPLE <<"WrongAnimal destructor called" << RESET <<std::endl;
