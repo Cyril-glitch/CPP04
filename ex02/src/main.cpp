@@ -6,11 +6,11 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 11:05:39 by cyril             #+#    #+#             */
-/*   Updated: 2026/09/16 14:36:29 by cyril            ###   ########.fr       */
+/*   Updated: 2026/09/16 15:13:43 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 #include "../inc/Cat.hpp"
 #include "../inc/Dog.hpp"
 #include "../inc/WrongAnimal.hpp"
@@ -22,8 +22,8 @@ int main()
     // TEST DESTRUCTOR LEAKS
     {
         std::cout << ICE_BLUE << "*** TEST DESTRUCTOR LEAKS ***\n" << RESET << std::endl;
-        const Animal *j = new Dog();
-        const Animal *i = new Cat();
+        const AAnimal *j = new Dog();
+        const AAnimal *i = new Cat();
         delete j; // should not create a leak
         delete i;
         std::cout << std::endl;
@@ -32,7 +32,7 @@ int main()
     // TEST ANIMAL ARRAY
     {
         const int size = 4;
-        Animal* tab[size];
+        AAnimal* tab[size];
 
         std::cout << ICE_BLUE << "*** TEST ANIMALS ARRAY ***\n" << RESET << std::endl;
         for (int i = 0; i < size; i++)
@@ -77,7 +77,7 @@ int main()
         originalCat.getBrain()->setIdea(0, "run after the mouse");
         
         Cat copyCat;
-        copyCat = originalCat;         
+        copyCat = originalCat; // Appelle l'opérateur d'affectation (et non le constructeur de copie)
         originalCat.getBrain()->setIdea(0, "I want to eat");
 
         std::cout << std::endl;
